@@ -56,21 +56,7 @@ console.log('Player Score: ' + playerScore);
 console.log('Computer Score: ' + computerScore);
 
 function game() {
-  playerSelection = rpsSelection();
-  computerSelection = rpsSelection();
-  playRound(playerSelection, computerSelection);
-  playerSelection = rpsSelection();
-  computerSelection = rpsSelection();
-  playRound(playerSelection, computerSelection);
-  playerSelection = rpsSelection();
-  computerSelection = rpsSelection();
-  playRound(playerSelection, computerSelection);
-  playerSelection = rpsSelection();
-  computerSelection = rpsSelection();
-  playRound(playerSelection, computerSelection);
-  playerSelection = rpsSelection();
-  computerSelection = rpsSelection();
-  playRound(playerSelection, computerSelection);
+  playRound();
 }
 
 console.log(game());
