@@ -58,5 +58,3 @@ console.log('Computer Score: ' + computerScore);
 function game() {
   playRound();
 }
-
-console.log(game());
