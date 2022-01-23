@@ -36,8 +36,8 @@ function rpsSelection() {
 
 /**
  *
- * @param {} playerSelection players RPS selection
- * @param {} computerSelection computers RPS selection
+ * @param {number} playerSelection players RPS selection
+ * @param {number} computerSelection computers RPS selection
  * @returns game text of win, loss, or draw and the matchup
  */
 function playRound(playerSelection, computerSelection) {
@@ -63,26 +63,34 @@ function playRound(playerSelection, computerSelection) {
     playerWin = true;
   }
   trackScore();
+  playerSelection = '';
+  computerSelection = '';
   return gameText;
 }
 
 // Event listeners for individual buttons
 rockBtn.addEventListener('click', () => {
-  playRound(1, computerSelection);
+  playerSelection = 'Rock';
+  computerSelection = rpsSelection();
+  playRound(playerSelection, computerSelection);
   gameResult.textContent = gameText;
   playerChoice.textContent = playerSelection;
   computerChoice.textContent = computerSelection;
 });
 
 paperBtn.addEventListener('click', () => {
-  playRound(2, computerSelection);
+  playerSelection = 'Paper';
+  computerSelection = rpsSelection();
+  playRound(playerSelection, computerSelection);
   gameResult.textContent = gameText;
   playerChoice.textContent = playerSelection;
   computerChoice.textContent = computerSelection;
 });
 
 scissorsBtn.addEventListener('click', () => {
-  playRound(3, computerSelection);
+  playerSelection = 'Scissors';
+  computerSelection = rpsSelection();
+  playRound(playerSelection, computerSelection);
   gameResult.textContent = gameText;
   playerChoice.textContent = playerSelection;
   computerChoice.textContent = computerSelection;
