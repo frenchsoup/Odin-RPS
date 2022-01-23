@@ -73,34 +73,36 @@ rockBtn.addEventListener('click', () => {
   playerSelection = 'Rock';
   computerSelection = rpsSelection();
   playRound(playerSelection, computerSelection);
-  gameResult.textContent = gameText;
   playerChoice.textContent = playerSelection;
   computerChoice.textContent = computerSelection;
+  gameResult.textContent = gameText;
 });
 
 paperBtn.addEventListener('click', () => {
   playerSelection = 'Paper';
   computerSelection = rpsSelection();
   playRound(playerSelection, computerSelection);
-  gameResult.textContent = gameText;
   playerChoice.textContent = playerSelection;
   computerChoice.textContent = computerSelection;
+  gameResult.textContent = gameText;
 });
 
 scissorsBtn.addEventListener('click', () => {
   playerSelection = 'Scissors';
   computerSelection = rpsSelection();
   playRound(playerSelection, computerSelection);
-  gameResult.textContent = gameText;
   playerChoice.textContent = playerSelection;
   computerChoice.textContent = computerSelection;
+  gameResult.textContent = gameText;
 });
 
 randomBtn.addEventListener('click', () => {
+  playerSelection = rpsSelection();
+  computerSelection = rpsSelection();
   playRound(playerSelection, computerSelection);
-  gameResult.textContent = gameText;
   playerChoice.textContent = playerSelection;
   computerChoice.textContent = computerSelection;
+  gameResult.textContent = gameText;
 });
 
 function trackScore() {
